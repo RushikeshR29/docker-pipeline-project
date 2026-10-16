@@ -5,24 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jenkins + Docker Demo</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .card {
-      background: #fff;
-      padding: 40px 60px;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    h1 { color: #2c3e50; margin-bottom: 8px; }
-    p  { color: #666; }
+     body {
+    font-family: Arial, sans-serif;
+
+    /* Futuristic 3D background */
+    background:
+        radial-gradient(ellipse at 20% 20%,
+            rgba(0, 180, 255, 0.35), transparent 40%),
+        radial-gradient(ellipse at 80% 80%,
+            rgba(120, 0, 255, 0.35), transparent 40%),
+        linear-gradient(135deg, #020617, #0f172a, #111827);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+     .card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px 60px;
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(0, 180, 255, 0.15);
+
+    backdrop-filter: blur(15px);
+
+    text-align: center;
+    color: white;
+
+    transform: perspective(1000px) rotateX(3deg);
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: perspective(1000px) rotateX(0deg) translateY(-5px);
+}
+
+h1 {
+    color: #38bdf8;
+    margin-bottom: 8px;
+}
+
+p {
+    color: #e2e8f0;
+}
   </style>
 </head>
 <body>
